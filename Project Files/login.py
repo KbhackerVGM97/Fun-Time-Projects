@@ -12,7 +12,16 @@ page+='''
 </head>
 <body>
 '''
+def hash(s):
+    s = str(s)
+    m=1
+    ans = 0
+    for letter in s:
+        ans += (ord(letter) * m)
+        m+=1
+    return ans
 
+        
 form=cgi.FieldStorage()
 
 if 'user' in form and 'pw' in form:
@@ -31,7 +40,7 @@ if 'user' in form and 'pw' in form:
            
         else: ##registers user
             f2=open('data/registered.txt','a')
-            f2.write(form['user'].value+':'+form['pw'].value+'\n')
+            f2.write(form['user'].value+':'+str(hash(form['pw'].value))+'\n')
             f2.close()
             page+='Congratulations! You are now registered!'
             D1[form['user'].value]=form['pw'].value
@@ -39,7 +48,7 @@ if 'user' in form and 'pw' in form:
             f3.write(form['user'].value+'\n~\n-\n')
 
     else: ##If the user wants to log in
-        if form['user'].value in D1 and form['pw'].value==D1[form['user'].value]:
+        if form['user'].value in D1 and str(hash(form['pw'].value))==D1[form['user'].value]:
             page+='<h1><center>Welcome!</center></h1>'    
         else:
             page+='This is not a valid username and password combination.'
