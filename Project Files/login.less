@@ -7,6 +7,12 @@ h1 {
     text-align: center;
     font-weight: bold;
     margin: 20px 20px;
+    transition: transform 2s;
+    -webkit-transition: -webkit-transform 2s;
+    &:hover {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+    }
 }
 
 form {
@@ -17,5 +23,6 @@ form {
     width: 50%;
     background-color: #99ff00;
     border: 7px groove #33cc00;
+    margin: 30px 30px;
 }
 
