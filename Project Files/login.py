@@ -50,6 +50,7 @@ if 'user' in form and 'pw' in form:
             f3.close()
             ##give user a data directory 
             os.makedirs('data/'+user+'/')
+            os.chmod('data/'+user+'/',0777)
             
     else: ##If the user wants to log in
         if form['user'].value in D1 and str(hash(form['pw'].value))==D1[form['user'].value]:
