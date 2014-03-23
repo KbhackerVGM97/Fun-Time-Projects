@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import cgi, cgitb
 import datetime
+import os
 #from datetime import *
 cgitb.enable()
 
