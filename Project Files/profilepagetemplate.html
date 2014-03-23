@@ -1,18 +1,21 @@
 <html>
   <head>
     <title>Edit Your Profile</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
   </head>
   <body>
     <h1>*****'s Profile</h1>
-    <form action="profileupdater.py" method="post">
-      First Name: <input type="text" name="firstname" value = "Enter First Name">
-      <br><br>
-	  Last Name: <input type="text" name="lastname" value = "Enter Last Name">
-      <br><br>
-	  E-mail Address: <input type="text" name="email" value = "Enter Your E-mail">
-      <br><br>
-	  <input type="hidden" value="*****" name="user">
-      <input type="submit" value="Update" name="update">
-    </form>
+    <div class="box">
+      <form action="profileupdater.py" method="post">
+	First Name: <input type="text" name="firstname" value = "Enter First Name">
+	<br><br>
+	Last Name: <input type="text" name="lastname" value = "Enter Last Name">
+	<br><br>
+	E-mail Address: <input type="text" name="email" value = "Enter Your E-mail">
+	<br><br>
+	<input type="hidden" value="*****" name="user">
+	<input type="submit" value="Update" name="update">
+      </form>
+    </div>
   </body>
 </html>
