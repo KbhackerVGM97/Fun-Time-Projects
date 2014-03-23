@@ -9,7 +9,7 @@ page='Content-type: text/html\n\n'
 form=cgi.FieldStorage()
 user = form["username"].value
 f1=open('projectspagetemplate.html','r')
-pages+=f1.read()
+pages=f1.read()
 f1.close()
 #pages is a complete template where only the tables will need to be replaced
 splitpages = pages.split('<div id="insert"></div>')
