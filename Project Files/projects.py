@@ -43,7 +43,7 @@ if os.path.exists('data/'+user+'/projectdata.txt'):#if the path exists
         page+='<td>'+L2[1]+'</td>'
         page+='<td>'+L2[2]+'</td></tr>'
 else:
-    if !(os.path.exists('data/'+user)):
+    if not os.path.exists('data/'+user):
         os.mkdir('data/'+user,0777);
     f1 = open ('data/' + user + '/projectdata.txt','w')
     os.chmod('data/'+user+'/projectdata.txt',0777)
