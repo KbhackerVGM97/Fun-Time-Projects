@@ -21,9 +21,8 @@ def hash(s):
         m+=1
     return ans
 
-        
 form=cgi.FieldStorage()
-
+user = form['user'].value
 if 'user' in form and 'pw' in form:
     f1=open('data/registered.txt','r')
     g1=f1.read().splitlines()
@@ -49,7 +48,12 @@ if 'user' in form and 'pw' in form:
 
     else: ##If the user wants to log in
         if form['user'].value in D1 and str(hash(form['pw'].value))==D1[form['user'].value]:
-            page+='<h1><center>Welcome!</center></h1>'    
+            #page+='<h1><center>Welcome!</center></h1>'
+            e1=open('homepagetemplate.html','r')
+            e2=e1.read()
+            e1.close()
+            page='Content-type: text/html\n\n'+e2
+            page.replace("*****",user)
         else:
             page+='This is not a valid username and password combination.'
 else:
