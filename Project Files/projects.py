@@ -8,9 +8,13 @@ cgitb.enable()
 page='Content-type: text/html\n\n'
 form=cgi.FieldStorage()
 user = form["username"].value
+f1=open('projectspagetemplate.html','r')
+pages+=f1.read()
+f1.close()
+#pages is a complete template where only the tables will need to be replaced
 
-if os.path.exists('data/'+user+'/projectdata.txt'):
-    #a file with the names ofall projects
+if os.path.exists('data/'+user+'/projectdata.txt'):#if the path exists
+    #a file with the names of all projects
     f1= open 'data/'+user+'/projectdata.txt'
     f2=f1.read()
     f1.close()
