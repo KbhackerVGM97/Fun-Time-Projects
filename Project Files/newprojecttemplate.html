@@ -14,8 +14,22 @@
 	<br>
 	Members: <input type="text" name="members" value="member1,member2,member3">
 	<br>
-	Due Date: <input type="datetime-local" name="duedate" value="2015-01-01T08:00:00">
+	Due Date: <input id="duedate" type="datetime-local" name="duedate" value="">
       </form>
+      <script>
+	function getTime()
+	{
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1;
+	var yyyy = today.getFullYear();
+	if(dd<10){dd='0'+dd}
+	if(mm<10){mm='0'+mm}
+	var today = yyyy+'-'+mm+'-'+dd+'T08:00:00';
+	document.getElementById("duedate").value = today;
+	}
+	getTime();	
+        </script>
     </div>
   </body>
 </html>
