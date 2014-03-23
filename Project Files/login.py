@@ -53,7 +53,7 @@ if 'user' in form and 'pw' in form:
             e2=e1.read()
             e1.close()
             page='Content-type: text/html\n\n'+e2
-            page.replace("*****",user)
+            page =page.replace("*****",user)
         else:
             page+='This is not a valid username and password combination.'
 else:
