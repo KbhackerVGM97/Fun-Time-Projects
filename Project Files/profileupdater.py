@@ -19,3 +19,10 @@ s+=form["email"].value
 f1=open('profiles/'+user+'profileinfo.txt','w')
 f1.write(s)
 f1.close()
+
+f1 = open('profileupdatedcheck.html', 'r')
+f2=f1.read()
+f1.close()
+page += f2
+page = page.replace('*****',user)
+print page
