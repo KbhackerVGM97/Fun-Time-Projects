@@ -35,7 +35,7 @@ if os.path.exists('data/'+user+'/projectdata.txt'):#if the path exists
 ##            L2+="***the project had no file***"
     for i in L1:
         #L1[i] is the ith project for that user
-        L2=i.split('*#*')
+        L2=L1[i].split(':')
         #L2[0] is name
         #L2[1] is due date
         #L2[2] is members
@@ -43,14 +43,14 @@ if os.path.exists('data/'+user+'/projectdata.txt'):#if the path exists
         page+='<td>'+L2[1]+'</td>'
         page+='<td>'+L2[2]+'</td></tr>'
 else:
-    os.mkdir('data/'+user,0777);
+    if !(os.path.exists('data/'+user)):
+        os.mkdir('data/'+user,0777);
     f1 = open ('data/' + user + '/projectdata.txt','w')
     os.chmod('data/'+user+'/projectdata.txt',0777)
     f1.close()
 
     
 page+=postlist
-page = page.replace('*****',user)
 print page
     
     
