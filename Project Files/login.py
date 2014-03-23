@@ -46,9 +46,9 @@ if 'user' in form and 'pw' in form:
             f3=open('data/data.txt','a')
             f3.write(form['user'].value+'\n~\n-\n')
             f3.close()
-            ##give user a data file 
-            f4=open('data/'+user+'/','w')
-            f4.close()
+            ##give user a data directory 
+            os.makedirs('data/'+user+'/')
+            
     else: ##If the user wants to log in
         if form['user'].value in D1 and str(hash(form['pw'].value))==D1[form['user'].value]:
             #page+='<h1><center>Welcome!</center></h1>'
