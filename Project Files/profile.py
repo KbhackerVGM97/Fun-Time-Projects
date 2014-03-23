@@ -18,9 +18,9 @@ if os.path.exists('profiles/'+user+'profileinfo.txt'):
     f2= f4.read()
     f4.close()
     L = f2.splitlines()
-    f1=f1.replace("Enter First Name", f2[0])
-    f1=f1.replace("Enter Last Name", f2[1])
-    f1=f1.replace("Enter Your E-mail", f2[2])
+    f1=f1.replace("Enter First Name", L[0])
+    f1=f1.replace("Enter Last Name", L[1])
+    f1=f1.replace("Enter Your E-mail", L[2])
 
 page += f1
 print page
