@@ -51,6 +51,7 @@ else:
 
     
 page+=postlist
+page = page.replace('*****',user)
 print page
     
     

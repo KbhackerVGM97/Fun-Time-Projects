@@ -18,7 +18,7 @@ projectdata = form['project'].value
 
 project = name + '*#*' + duedate + '*#*' + members
 
-projectinfo = project + '*:*' + projectdata
+projectinfo = project + '*#*' + projectdata
 #update projectdata.txt
 f1 = open('data/'+user+'/projectdata.txt','r')
 f2=f1.read()

@@ -1,0 +1,1 @@
+bam*#*2014-03-23T08:00:00*#*member1,member2,member3*:*testing
