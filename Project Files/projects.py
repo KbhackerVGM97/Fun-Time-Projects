@@ -2,6 +2,7 @@
 import cgi, cgitb
 import datetime
 import os
+import sys
 #from datetime import *
 cgitb.enable()
 
@@ -42,6 +43,7 @@ if os.path.exists('data/'+user+'/projectdata.txt'):#if the path exists
         page+='<td>'+L2[1]+'</td>'
         page+='<td>'+L2[2]+'</td></tr>'
 else:
+    os.mkdir('data/'+user,0777);
     f1 = open ('data/' + user + '/projectdata.txt','w')
     os.chmod('data/'+user+'/projectdata.txt',0777)
     f1.close()
