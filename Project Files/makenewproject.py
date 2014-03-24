@@ -10,11 +10,11 @@ page='Content-type: text/html\n\n'
 form=cgi.FieldStorage()
 user = form["username"].value
 
-name = form[name].value
-members = form[members].value
+name = form['name'].value
+members = form['members'].value
 memberslist = members.split(',')
-duedate = form[duedate].value
-projectdata = form[project].value
+duedate = form['duedate'].value
+projectdata = form['project'].value
 
 project = name + '*#*' + duedate + '*#*' + members
 

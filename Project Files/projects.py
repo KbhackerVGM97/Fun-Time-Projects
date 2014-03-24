@@ -35,7 +35,7 @@ if os.path.exists('data/'+user+'/projectdata.txt'):#if the path exists
 ##            L2+="***the project had no file***"
     for i in L1:
         #L1[i] is the ith project for that user
-        L2=L1[i].split(':')
+        L2=i.split('*#*')
         #L2[0] is name
         #L2[1] is due date
         #L2[2] is members
@@ -50,6 +50,7 @@ else:
 
     
 page+=postlist
+page = page.replace('*****',user)
 print page
     
     
