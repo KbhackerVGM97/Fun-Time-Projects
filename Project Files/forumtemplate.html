@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Forum</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+  </head>
+  <body>
+    <form action="gohome.py" method="post">
+      <input type="hidden" value="*****" name="username">
+      <input type="submit" name="home" value="Go Home">
+    <div class="box">
+      <form action="makepost.py" method="post">
+	<input type="hidden" value="*****" name="username">
+	<textarea name="forumtext" rows=3 cols=30 readonly>~~~~~</textarea>
+	<br><br>
+	<textarea name="posttext" rows=3 cols=30>Enter Post Here</textarea>
+	<br><br>
+	<input type="submit" name="post" value="Post">
+      </form>
+    </div>
+  </body>
+</html>
+    
