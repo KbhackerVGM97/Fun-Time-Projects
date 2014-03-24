@@ -4,19 +4,22 @@
     <link rel="stylesheet" type="text/css" href="login.css">
   </head>
   <body>
+    <form action="gohome.py" method="post">
+      <input type="hidden" value="*****" name="username">
+      <input type="submit" name="home" value="Go Home">
+    </form>
     <div class="box">
       <form action="makenewproject.py" method="post">
 	<input type="hidden" value="*****" name="username">
-	<br>
 	<textarea name="project" rows=3 cols=30>Project Goes Here</textarea>
-	<br>
+	<br><br>
 	Name: <input type="text" name="name" value="Enter Name">
-	<br>
+	<br><br>
 	Members: <input type="text" name="members" value="member1,member2,member3">
-	<br>
+	<br><br>
 	Due Date: <input id="duedate" type="datetime-local" name="duedate" value="">
-	<br>
-	<input type="submit" name="submit" value="submit">
+	<br><br>
+	<input type="submit" name="submit" value="Submit">
       </form>
       <script>
 	function getTime()
