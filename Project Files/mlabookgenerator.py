@@ -38,6 +38,6 @@ f1=open('citationadded.html','r')
 f2=f1.read()
 f1.close()
 
-f2.replace('*****',user)
+f2=f2.replace('*****',user)
 page+= f2
 print page

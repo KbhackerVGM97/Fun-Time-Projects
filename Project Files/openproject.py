@@ -32,6 +32,7 @@ f3=f3.replace('value=""','value="'+L1[1]+'"')
 f3=f3.replace('getTime(today);','getTime('+L1[1]+');')
 f3=f3.replace("Project Goes Here",L1[3])
 f3=f3.replace("*****",user)
+f3=f3.replace('&&&&&',name)
 
 page+=f3
 print page
