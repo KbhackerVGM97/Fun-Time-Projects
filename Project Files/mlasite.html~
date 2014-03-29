@@ -1,21 +1,35 @@
 <html>
   <head>
-    <title>Book Citation (MLA Style)</title>
+    <title>Website Citation (MLA Style)</title>
     <link rel="stylesheet" type="text/css" href="../login.css">
   </head>
   <body>
     <form action="citation.py" method="post">
       <input type="hidden" value="*****" name="username">
-      <input type="hidden" value="mlabook" name="type">
+      <input type="hidden" value="mlasite" name="type">
       Author's First Name:  <input type="text" name="firstname"><br>
       Author's Last Name: <input type="text" name="lastname"><br>
       Title: <input type="text" name="title"><br>
-      City of Publication: <input type="text" name="city"><br>
-      Publisher: <input type="text" name="publisher"><br>
-      Year of Publication: <input type="text" name="year"><br>
-      Medium of Publication: <input type="text" name="medium" value="Print"><br>
+      Sponsor/Publisher: <input type="text" name="sponsor"><br>
+      Date of Creation: <input type="date" name="created"><br>
+      Medium of Publication: <input type="text" name="medium" value="Web"><br>
+      Date of access: <input id="access" type="date" name="access" value=""><br>
       <br>
       <input type="submit" name="submit" value="Submit">
     </form>
+    <script>
+	function getTime()
+	{
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1;
+	var yyyy = today.getFullYear();
+	if(dd<10){dd='0'+dd}
+	if(mm<10){mm='0'+mm}
+	var today = yyyy+'-'+mm+'-'+dd;
+	document.getElementById("access").value = today;
+	}
+	getTime();	
+        </script>
   </body>
 </html>
