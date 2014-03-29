@@ -29,6 +29,7 @@ f1.close()
 f3=f3.replace("Enter Name",L1[0])
 f3=f3.replace("member1,member2,member3",L1[2])
 f3=f3.replace('value=""','value="'+L1[1]+'"')
+f3=f3.replace('getTime(today);','getTime('+L1[1]+');')
 f3=f3.replace("Project Goes Here",L1[3])
 f3=f3.replace("*****",user)
 
