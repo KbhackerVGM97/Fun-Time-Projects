@@ -8,12 +8,13 @@ cgitb.enable()
 
 page='Content-type: text/html\n\n'
 form=cgi.FieldStorage()
+
 user = form["username"].value
 
-f1=open('citation.html','r,')
+f1=open('homepagetemplate.html','r')
 f2=f1.read()
 f1.close()
-f2=f2.replace('*****',user)
 
 page+=f2
+page = page.replace('*****',user)
 print page
