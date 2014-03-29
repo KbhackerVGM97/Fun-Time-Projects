@@ -9,6 +9,7 @@ cgitb.enable()
 page='Content-type: text/html\n\n'
 form=cgi.FieldStorage()
 user = form["username"].value
+project=form["projectname"].value
 
 citationtype=form['style'].value
 citationtype+=form['type'].value
@@ -19,4 +20,5 @@ f1.close()
 
 page+=f2
 page=page.replace("*****",user)
+page=page.replace("&&&&&",project)
 print page

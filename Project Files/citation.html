@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>New Source</title>
+    <link rel="stylesheet" type="text/css" href="../login.css">
+  </head>
+  <body>
+    <h1> Fill Out This Form to Make a Citation</h1>
+    <form action="citationredirect.py" method="post">
+	  <input type="text" value="project name" name="projectname">
+      <input type="hidden" value="*****" name="username">
+      Style: 
+      <select name="style">
+	<option value="mla">MLA</option>
+      </select>
+      <br><br>
+      Type of Source:
+      <select name="type">
+	<option value="book">Book</option>
+      </select>
+      <br><br>
+      <input type="submit" name="next" value="Next">
+    </form>
+  </body>
+</html>
+      
