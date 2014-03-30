@@ -37,12 +37,15 @@ for i in memberslist:
         projects=""
     if not (project in projects):
         f2+=project+'\n'    
-        f1 = open('data/'+user+'/projectdata.txt','w')
-        f1.write(f2)
+        ##doesn't seem to work
+        ##f1 = open('data/'+i+'/projectdata.txt','w')
+        ##f1.write(f2)
+        f1 = open('data/'+i+'/projectdata.txt','a')
+        f1.write(project+'\n')
         f1.close()
         #writes the project file
-        f1 = open('data/'+user+'/'+name+'.txt','w')
-        f1.write(projectinfo)
+        f1 = open('data/'+i+'/'+name+'.txt','w')
+        f1.write(projectinfo+'\n')
         f1.close()
 f1 = open('madeprojecttemplate.html','r')
 f2=f1.read()

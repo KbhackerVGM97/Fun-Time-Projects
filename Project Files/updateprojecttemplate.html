@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>New Project</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+  </head>
+  <body>
+    <a href="login.html">Logout</a> 
+    <form action="gohome.py" method="post">
+      <input type="hidden" value="*****" name="username">
+      <input type="submit" name="home" value="Go Home">
+    </form>
+    <div class="box">
+      <form action="updateproject.py" method="post">
+	<input type="hidden" value="*****" name="username">
+	<textarea name="project" rows=3 cols=30>Project Goes Here</textarea>
+	<br><br>
+	Name: <input type="text" name="name" value="Enter Name">
+	<br><br>
+	Members: <input type="text" name="members" value="member1,member2,member3">
+	<br><br>
+	Due Date: <input id="duedate" type="datetime-local" name="duedate" value="">
+	<br><br>
+	<input type="submit" name="submit" value="Submit">
+      </form>
+      <form action="showcitation.py" method="post">
+	<input type="hidden" value="*****" name="username">
+	<input type="hidden" value="&&&&&" name="projectname">
+	<input type="submit" value="Show Citations" name="showcitations">
+      </form>
+      <br><br>
+      <script>
+	function getTime(s)
+	{
+	document.getElementById("duedate").value = s;
+	}
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1;
+	var yyyy = today.getFullYear();
+	if(dd<10){dd='0'+dd}
+	if(mm<10){mm='0'+mm}
+	var today = yyyy+'-'+mm+'-'+dd+'T08:00:00';
+	getTime(today);	
+        </script>
+    </div>
+  </body>
+</html>
