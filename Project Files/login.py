@@ -43,7 +43,7 @@ if 'user' in form and 'pw' in form:
             f2=open('data/registered.txt','a')
             f2.write(form['user'].value+':'+str(hash(form['pw'].value))+'\n')
             f2.close()
-            page+='Congratulations! You are now registered!'
+            page+='<div class="box">Congratulations! You are now registered!</div>'
             D1[form['user'].value]=form['pw'].value
             f3=open('data/data.txt','a')
             f3.write(form['user'].value+'\n~\n-\n')
