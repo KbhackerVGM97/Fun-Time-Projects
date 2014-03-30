@@ -29,8 +29,10 @@
       </form>
       <br><br>
       <script>
-	function getTime()
+	function getTime(s)
 	{
+	document.getElementById("duedate").value = s;
+	}
 	var today = new Date();
 	var dd = today.getDate();
 	var mm = today.getMonth()+1;
@@ -38,9 +40,7 @@
 	if(dd<10){dd='0'+dd}
 	if(mm<10){mm='0'+mm}
 	var today = yyyy+'-'+mm+'-'+dd+'T08:00:00';
-	document.getElementById("duedate").value = today;
-	}
-	getTime();	
+	getTime(today);	
         </script>
     </div>
   </body>
