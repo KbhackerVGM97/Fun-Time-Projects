@@ -37,7 +37,7 @@ if 'user' in form and 'pw' in form:
             D1[L[0]]=L[1]
     if 'register' in form: #if the user wants to register
         if form['user'].value in D1:
-            page+='<div class="box">This username had already been taken.</div>'
+            page+='<div class="box">This username has already been taken.</div>'
            
         else: ##registers user
             f2=open('data/registered.txt','a')
