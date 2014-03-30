@@ -31,6 +31,7 @@ f3=f3.replace("member1,member2,member3",L1[2])
 f3=f3.replace('value=""','value="'+L1[1]+'"')
 f3=f3.replace("Project Goes Here",L1[3])
 f3=f3.replace("*****",user)
+f3=f3.replace('&&&&&',name)
 
 page+=f3
 print page
