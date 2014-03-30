@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Book Citation (MLA Style)</title>
-    <link rel="stylesheet" type="text/css" href="../login.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
   </head>
   <body>
     <form action="mlabookgenerator.py" method="post">

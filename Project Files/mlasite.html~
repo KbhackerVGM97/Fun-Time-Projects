@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Website Citation (MLA Style)</title>
-    <link rel="stylesheet" type="text/css" href="../login.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
   </head>
   <body>
     <form action="citation.py" method="post">
