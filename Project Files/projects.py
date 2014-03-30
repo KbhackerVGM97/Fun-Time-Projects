@@ -33,7 +33,19 @@ if os.path.exists('data/'+user+'/projectdata.txt'):#if the path exists
 ##            f1.close()
 ##        else:
 ##            L2+="***the project had no file***"
+    L3=[]
+    L4=[]
     for i in L1:
+        L2=i.split('*#*')
+        L3.append(L2[1])
+    L3.sort()
+    for i in L3:
+        for j in L1:
+            L2=j.split("*#*")
+            if L2[1] == i:
+                L4.append(j)
+                
+    for i in L4:
         #L1[i] is the ith project for that user
         L2=i.split('*#*')
         #L2[0] is name
